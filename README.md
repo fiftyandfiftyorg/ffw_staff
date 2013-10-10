@@ -10,9 +10,11 @@ Needs: Shortcodes.
 
 Quickly change the slug with
 
-`if( !defined('FFW_STAFF_SLUG') ){
+```
+if( !defined('FFW_STAFF_SLUG') ){
 	define( 'FFW_STAFF_SLUG', 'team' );
-}`
+}
+```
 
 or quickly change the labels with
 
