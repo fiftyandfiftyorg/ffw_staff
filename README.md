@@ -4,9 +4,9 @@
 Create simple events for your site.
 
 Needs
-- [] Shortcodes
-- [] Archive Template
-- [] Meta Data (possibly using not using ACF)
+- [ ] Shortcodes
+- [ ] Archive Template
+- [ ] Meta Data (possibly using not using ACF)
 
 
 ### Features
