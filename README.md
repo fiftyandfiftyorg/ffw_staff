@@ -18,14 +18,16 @@ if( !defined('FFW_STAFF_SLUG') ){
 
 or quickly change the labels with
 
-`function ffw_staff_labels( $labels ) {
+```php
+function ffw_staff_labels( $labels ) {
 	$labels = array(
 	   'singular' => __('Team Member', 'your-domain'),
 	   'plural' => __('Team Members', 'your-domain')
 	);
 	return $labels;
 }
-add_filter('ffw_staff_default_name', 'ffw_staff_labels');`
+add_filter('ffw_staff_default_name', 'ffw_staff_labels');
+```
 
 
 ### Changelog
