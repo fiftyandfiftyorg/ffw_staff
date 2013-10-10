@@ -1,12 +1,7 @@
 ## Fifty & Fifty Frame Work Staff Plugin
 ==========
 
-Create simple events for your site.
-
-Needs
-- [ ] Shortcodes
-- [ ] Archive Template
-- [ ] Meta Data (possibly using not using ACF)
+Add staff members to your site.
 
 
 ### Features
