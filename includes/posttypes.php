@@ -19,9 +19,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @return void
  */
 function setup_ffw_staff_post_types() {
-
+	global $ffw_staff_settings;
 	$archives = defined( 'FFW_STAFF_DISABLE_ARCHIVE' ) && FFW_STAFF_DISABLE_ARCHIVE ? false : true;
-	$slug     = defined( 'FFW_STAFF_SLUG' ) ? FFW_STAFF_SLUG : 'staff';
+
+	//Check to see if anything is set in the settings area.
+	if( !empty( $ffw_staff_settings['staff_slug'] ) ) {
+	    $slug = defined( 'DNTLY_CAMPAIGNS_SLUG' ) ? DNTLY_CAMPAIGNS_SLUG : $ffw_staff_settings['staff_slug'];
+	} else {
+	    $slug = defined( 'DNTLY_CAMPAIGNS_SLUG' ) ? DNTLY_CAMPAIGNS_SLUG : 'staff';
+	}
+	
 	$rewrite  = defined( 'FFW_STAFF_DISABLE_REWRITE' ) && FFW_STAFF_DISABLE_REWRITE ? false : array('slug' => $slug, 'with_front' => false);
 
 	$staff_labels =  apply_filters( 'ffw_staff_staff_labels', array(
@@ -50,6 +57,7 @@ function setup_ffw_staff_post_types() {
 		'publicly_queryable'=> true,
 		'show_ui' 			=> true,
 		'show_in_menu' 		=> true,
+		'menu_icon'         => FFW_STAFF_PLUGIN_URL . '/assets/images/staff.png',
 		'query_var' 		=> true,
 		'rewrite' 			=> $rewrite,
 		'map_meta_cap'      => true,
@@ -70,11 +78,22 @@ add_action( 'init', 'setup_ffw_staff_post_types', 1 );
  * @return array $defaults Default labels
  */
 function ffw_staff_get_default_labels() {
-	$defaults = array(
-	   'singular' => __( 'Staff', 'FFW_staff' ),
-	   'plural' => __( 'Staff', 'FFW_staff')
-	);
+	global $ffw_staff_settings;
+
+	if( !empty( $ffw_staff_settings['staff_label_plural'] ) || !empty( $ffw_staff_settings['staff_label_singular'] ) ) {
+	    $defaults = array(
+	       'singular' => $ffw_staff_settings['staff_label_singular'],
+	       'plural' => $ffw_staff_settings['staff_label_plural']
+	    );
+	 } else {
+		$defaults = array(
+		   'singular' => __( 'Staff', 'FFW_staff' ),
+		   'plural' => __( 'Staff', 'FFW_staff')
+		);
+	}
+	
 	return apply_filters( 'ffw_staff_default_name', $defaults );
+
 }
 
 /**
