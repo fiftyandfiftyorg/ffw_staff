@@ -24,9 +24,9 @@ function setup_ffw_staff_post_types() {
 
 	//Check to see if anything is set in the settings area.
 	if( !empty( $ffw_staff_settings['staff_slug'] ) ) {
-	    $slug = defined( 'FFW_STAFF_CAMPAIGNS_SLUG' ) ? FFW_STAFF_CAMPAIGNS_SLUG : $ffw_staff_settings['staff_slug'];
+	    $slug = defined( 'FFW_STAFF_SLUG' ) ? FFW_STAFF_SLUG : $ffw_staff_settings['staff_slug'];
 	} else {
-	    $slug = defined( 'FFW_STAFF_CAMPAIGNS_SLUG' ) ? FFW_STAFF_CAMPAIGNS_SLUG : 'staff';
+	    $slug = defined( 'FFW_STAFF_SLUG' ) ? FFW_STAFF_SLUG : 'staff';
 	}
 	
 	$rewrite  = defined( 'FFW_STAFF_DISABLE_REWRITE' ) && FFW_STAFF_DISABLE_REWRITE ? false : array('slug' => $slug, 'with_front' => false);
