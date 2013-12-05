@@ -106,6 +106,7 @@ final class FFW_STAFF {
     if( is_admin() ){
         //Admin Required Plugin Files
         require_once FFW_STAFF_PLUGIN_DIR . '/includes/admin/admin-pages.php';
+        require_once FFW_STAFF_PLUGIN_DIR . '/includes/admin/admin-notices.php';
         require_once FFW_STAFF_PLUGIN_DIR . '/includes/admin/settings/display-settings.php';
 
     }
