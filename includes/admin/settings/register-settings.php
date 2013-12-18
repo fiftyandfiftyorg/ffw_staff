@@ -156,7 +156,7 @@ function ffw_staff_get_registered_settings() {
                 'staff_enable_sidebar' => array(
                     'id' => 'staff_enable_sidebar',
                     'name' => __( ffw_staff_get_label_singular() . ' Sidebar', 'ffw_staff' ),
-                    'desc' => __( 'Enable ' . ffw_staff_get_label_singular() . 'sidebars', 'ffw_staff' ),
+                    'desc' => __( 'Enable ' . ffw_staff_get_label_singular() . ' sidebars', 'ffw_staff' ),
                     'type' => 'checkbox',
                     'std' => ''
                 ),
