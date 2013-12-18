@@ -153,6 +153,20 @@ function ffw_staff_get_registered_settings() {
                     'size' => 'medium',
                     'std' => ffw_staff_get_label_singular()
                 ),
+                'staff_enable_sidebar' => array(
+                    'id' => 'staff_enable_sidebar',
+                    'name' => __( ffw_staff_get_label_singular() . ' Sidebar', 'ffw_staff' ),
+                    'desc' => __( 'Enable the ' . ffw_staff_get_label_singular(), 'ffw_staff' ),
+                    'type' => 'checkbox',
+                    'std' => ''
+                ),
+                'staff_disable_link_to_single' => array(
+                    'id' => 'staff_disable_link_to_single',
+                    'name' => __( 'Disable Link', 'ffw_staff' ),
+                    'desc' => __( 'Disable clicking through to the single detail.', 'ffw_staff' ),
+                    'type' => 'checkbox',
+                    'std' => ''
+                ),
             )
         ),
         
