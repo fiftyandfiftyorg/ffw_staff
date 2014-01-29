@@ -167,6 +167,15 @@ function ffw_staff_get_registered_settings() {
                     'type' => 'checkbox',
                     'std' => ''
                 ),
+                'staff_posts_per_page' => array(
+                    'id' => 'staff_posts_per_page',
+                    'name' => __( 'Archive Posts Page', 'ffw_staff' ),
+                    'desc' => __( 'Enter the number of posts you would like to display on the archive template'  , 'ffw_staff' ),
+                    'type' => 'text',
+                    'size' => 'medium',
+                    'std' => '100'
+                ),
+
             )
         ),
         
