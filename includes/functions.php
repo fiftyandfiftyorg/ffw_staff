@@ -16,7 +16,12 @@ function ffw_staff_disable_link()
     
 }
 
-
+/**
+ * Allow the ability to set posts_per_page on the archive template from the admin area. BOOM!
+ * 
+ * @param  [type] $query [description]
+ * @return [type]        [description]
+ */
 function ffw_staff_adjust_posts_per_page( $query ) {
     
     global $ffw_staff_settings;
