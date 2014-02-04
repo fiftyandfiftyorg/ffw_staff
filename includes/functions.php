@@ -40,3 +40,24 @@ function ffw_staff_adjust_posts_per_page( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'ffw_staff_adjust_posts_per_page', 1 );
+
+
+/**
+ * Check if staff member is link to page is disabled
+ * 
+ * @return [type] [description]
+ */
+function ffw_staff_is_disabled( $post_id=null )
+{
+    global $post;
+
+    $post_id = isset( $post_id ) ? $post_id : $post->ID;
+
+    $disable_link_to = get_post_meta( $post_id, 'ffw_staff_disable_link_to', true);
+
+    $link_status = isset( $disable_link_to ) ? $disable_link_to : 0;
+
+    return $link_status;
+
+
+}

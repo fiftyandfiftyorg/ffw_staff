@@ -108,6 +108,7 @@ final class FFW_STAFF {
         require_once FFW_STAFF_PLUGIN_DIR . '/includes/admin/admin-pages.php';
         require_once FFW_STAFF_PLUGIN_DIR . '/includes/admin/admin-notices.php';
         require_once FFW_STAFF_PLUGIN_DIR . '/includes/admin/settings/display-settings.php';
+        require_once FFW_STAFF_PLUGIN_DIR . '/includes/admin/staff/metabox.php';
 
     }
 
