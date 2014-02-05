@@ -61,3 +61,14 @@ function ffw_staff_is_disabled( $post_id=null )
 
 
 }
+
+
+
+
+function get_staff_archive_image()
+{
+    global $ffw_staff_settings;
+
+    $archive_image = isset( $ffw_staff_settings['archive_image_url'] ) ? $ffw_staff_settings['archive_image_url'] : '';
+    return $archive_image;
+}

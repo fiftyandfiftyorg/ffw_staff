@@ -175,18 +175,12 @@ function ffw_staff_get_registered_settings() {
                     'size' => 'medium',
                     'std' => '100'
                 ),
-                'test_upload' => array(
-                    'id' => 'test_upload',
-                    'name' => __( 'Archive Posts Page', 'ffw_staff' ),
-                    'desc' => __( 'Enter the number of posts you would like to display on the archive template'  , 'ffw_staff' ),
+                'archive_image_url' => array(
+                    'id' => 'archive_image_url',
+                    'name' => __( 'Archive Header Image', 'ffw_staff' ),
+                    'desc' => __( 'Select the default header image for the archive page. Note: Currently this won\'t crop properly'  , 'ffw_staff' ),
                     'type' => 'upload',
-                ),
-                'test_color' => array(
-                    'id' => 'test_color',
-                    'name' => __( 'Archive Posts Page', 'ffw_staff' ),
-                    'desc' => __( 'Enter the number of posts you would like to display on the archive template'  , 'ffw_staff' ),
-                    'type' => 'color',
-                ),
+                )
 
             )
         ),
