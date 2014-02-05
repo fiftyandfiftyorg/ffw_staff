@@ -22,7 +22,7 @@ function ffw_staff_load_admin_scripts( $hook )
 
     //wp_enqueue_script( 'jquery-ui-datepicker');
     wp_enqueue_script( 'staff-admin-scripts' );
-    wp_localize_script( 'admin-scripts', 'ffw_staff_vars', array(
+    wp_localize_script( 'staff-admin-scripts', 'ffw_staff_vars', array(
         'new_media_ui'            => apply_filters( 'ffw_staff_use_35_media_ui', 1 ),
         ) 
     );
