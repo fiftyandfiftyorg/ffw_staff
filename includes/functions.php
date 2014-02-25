@@ -29,7 +29,7 @@ function ffw_staff_adjust_posts_per_page( $query ) {
     if ( is_admin() || ! $query->is_main_query() )
         return;
 
-    if ( is_post_type_archive( 'ffw_staff' ) ) {
+    if ( is_post_type_archive( 'ffw_staff' ) ||  $query->is_tax('staff_category')) {
         // Display 50 posts for a custom post type called 'movie'
         
         $ffw_staff_posts_per_page = isset( $ffw_staff_settings['staff_posts_per_page'] ) ? $ffw_staff_settings['staff_posts_per_page'] : 100;
@@ -40,6 +40,9 @@ function ffw_staff_adjust_posts_per_page( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'ffw_staff_adjust_posts_per_page', 1 );
+
+
+
 
 
 /**
