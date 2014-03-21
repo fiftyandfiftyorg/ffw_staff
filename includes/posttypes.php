@@ -57,7 +57,7 @@ function setup_ffw_staff_post_types() {
 		'publicly_queryable'=> true,
 		'show_ui' 			=> true,
 		'show_in_menu' 		=> true,
-		'menu_icon'         => 'dashicons-groups',
+		'menu_icon'         => 'dashicons-businessman',
 		'query_var' 		=> true,
 		'rewrite' 			=> $rewrite,
 		'map_meta_cap'      => true,
