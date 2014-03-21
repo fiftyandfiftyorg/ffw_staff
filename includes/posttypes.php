@@ -57,7 +57,6 @@ function setup_ffw_staff_post_types() {
 		'publicly_queryable'=> true,
 		'show_ui' 			=> true,
 		'show_in_menu' 		=> true,
-		'menu_position'		=> '34.1',
 		'menu_icon'         => 'dashicons-groups',
 		'query_var' 		=> true,
 		'rewrite' 			=> $rewrite,
